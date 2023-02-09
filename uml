@@ -1,0 +1,15 @@
+class Account{
+  +send_chat(message: string, recipient: string)
+}
+
+class Chat{
+  +send_chat(message: string, recipient: string)
+}
+
+class UserService {
+  +create_user(name: string, email: string)
+  -emailService: Account
+}
+
+Account<|-- Chat
+UserService --> Account: uses
