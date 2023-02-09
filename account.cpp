@@ -9,27 +9,27 @@
 
 // Implementation that does not apply the concept of dependency injection:
 
-class Email
+class Account
 {
 public:
-    void send_email(const std::string& message, const std::string& recipient)
+    void send_chat(const std::string& message, const std::string& recipient)
     {
-        // Code to send email
-        std::cout << "Sending email to " << recipient << " with message: " << message << std::endl;
+        
+        std::cout << "Sending messsages to " << recipient <<" "<< message << " using Teams" << std::endl;
     }
 };
 
 class User
 {
 private:
-    Email emailService;
+    Account emailService;
 
 public:
     void create_user(const std::string& name, const std::string& email)
     {
         // Code to create user
         std::cout << "Creating user with name: " << name << std::endl;
-        emailService.send_email("Welcome to our service!", email);
+        emailService.send_chat("Welcome to our service!", email);
     }
 };
 
